@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS drug_db;
+CREATE DATABASE drug_db;
