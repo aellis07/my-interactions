@@ -18,6 +18,7 @@ const getDrugId = async () => {
   const json2 = await result2.json();
   const drugId2 = json2.idGroup.rxnormId[0];
   console.log(drugId);
+  console.log(drugId2);
   getDrug(drugId, drugId2);
 };
 const getDrug = async (drugId, drugId2) => {
@@ -33,11 +34,18 @@ const getDrug = async (drugId, drugId2) => {
   for (let i = 0; i < drugRelation.length; i++) {
     const drugId = drugRelation[i].interactionConcept[1].minConceptItem.rxcui;
     const drugDescription = drugRelation[i].description;
-    const drugInformation = {
-      rxcui: drugId,
-      description: drugDescription,
-    };
-    console.log(drugInformation);
+    // const drugInfo = [drugId, drugDescription];
+    const secondDrug = drugId2;
+    if (secondDrug === drugId) {
+      console.log(drugDescription);
+    }
+    //   const drugInformation = {
+    //     rxcui: drugId,
+    //     description: drugDescription,
+    //   };
+    //   console.log(drugInformation);
+    // console.log(drugId);
   }
-  console.log(drugRelation);
+  //   console.log(drugRelation);
 };
+getDrugId();
