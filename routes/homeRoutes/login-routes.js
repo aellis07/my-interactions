@@ -1,7 +1,8 @@
 const router = require("express").Router();
 
+//  GET /login
 router.get("/", (req, res) => {
-  res.send("Welcome to /api/login");
+  res.render("login");
 });
 
 module.exports = router;
