@@ -1,7 +1,8 @@
 const router = require("express").Router();
 
+//  GET /cabinet
 router.get("/", (req, res) => {
-  res.send("Welcome to /api/cabinet");
+  res.render("cabinet");
 });
 
 module.exports = router;
