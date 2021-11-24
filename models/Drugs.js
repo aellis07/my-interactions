@@ -7,15 +7,19 @@ Drug.init(
     {
         id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
         drug_name: {
             type: DataTypes.STRING,
+            unique: true,
+            allowNull: false,
         },
         drug_id: {
             type: DataTypes.INTEGER,
             unique: true,
+            allowNull: false,
         },
     },
     { sequelize, timestamps: false, underscored: false, modelName: "drug" }
