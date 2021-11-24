@@ -20,3 +20,4 @@ Drug.init(
     },
     { sequelize, timestamps: false, underscored: false, modelName: "drug" }
 );
+module.exports = Drug;
