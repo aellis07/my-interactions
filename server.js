@@ -11,6 +11,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server. Force is set to false to not overwrite, decide as group if we want to change overwrite
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
 });
