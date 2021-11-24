@@ -1,6 +1,7 @@
 {
   "name": "my-interactions",
   "version": "1.0.0",
+  "description": "https://my-interactions.herokuapp.com",
   "description": "",
   "main": "server.js",
   "scripts": {
