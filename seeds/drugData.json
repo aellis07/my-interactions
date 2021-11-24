@@ -1,0 +1,19 @@
+[
+    {
+        "drug_name": "Advil",
+        "drug_id": 124135
+    },
+
+    {
+        "drug_name": "Amoxicillin",
+        "drug_id": 135161
+    },
+    {
+        "drug_name": "Brilinta",
+        "drug_id": 435835
+    },
+    {
+        "drug_name": "Caffine",
+        "drug_id": 427247
+    }
+]
