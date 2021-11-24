@@ -18,9 +18,9 @@ const getDrugId = async () => {
   const json2 = await result2.json();
   const drugId2 = json2.idGroup.rxnormId[0];
   console.log(drugId);
-  getDrug(drugId);
+  getDrug(drugId, drugId2);
 };
-const getDrug = async (drugId) => {
+const getDrug = async (drugId, drugId2) => {
   const result = await fetch(
     `https://rxnav.nlm.nih.gov/REST/interaction/interaction.json?rxcui=${drugId}&sources=DrugBank`,
     {
