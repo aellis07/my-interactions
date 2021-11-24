@@ -1,6 +1,8 @@
+const searchDrug = $("#drug-name");
+
+const drug = "advil";
+const drug2 = "etanercept";
 const getDrugId = async () => {
-  const drug = "advil";
-  const drug2 = "etanercept";
   const result = await fetch(
     `https://rxnav.nlm.nih.gov/REST/rxcui.json?name=${drug}&search=2`,
     {
@@ -34,18 +36,10 @@ const getDrug = async (drugId, drugId2) => {
   for (let i = 0; i < drugRelation.length; i++) {
     const drugId = drugRelation[i].interactionConcept[1].minConceptItem.rxcui;
     const drugDescription = drugRelation[i].description;
-    // const drugInfo = [drugId, drugDescription];
     const secondDrug = drugId2;
     if (secondDrug === drugId) {
       console.log(drugDescription);
     }
-    //   const drugInformation = {
-    //     rxcui: drugId,
-    //     description: drugDescription,
-    //   };
-    //   console.log(drugInformation);
-    // console.log(drugId);
   }
-  //   console.log(drugRelation);
 };
 getDrugId();
