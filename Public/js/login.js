@@ -1,8 +1,11 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
+  console.log(event);
 
   const email = document.querySelector("#email-field").value.trim();
   const password = document.querySelector("#password-field").value.trim();
+  console.log(email);
+  console.log(password);
 
   if (email && password) {
     const response = await fetch("/login", {
@@ -12,7 +15,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       alert("Failed to log in.");
     }

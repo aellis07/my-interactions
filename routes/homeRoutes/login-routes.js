@@ -21,18 +21,21 @@ router.post("/", async (req, res) => {
     });
 
     if (!dbUser) {
-      res
-        .status(400)
-        .json({ message: "Incorrect email or password. Please try again!" });
+      res.redirect("login");
+      console.log(
+        "Incorrect email or password. Please try again or create an account!"
+      );
       return;
     }
 
     const validPassword = await dbUser.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: "Incorrect email or password. Please try again!" });
+      res.redirect("login");
+      // res.status(400).json({
+      //   message:
+      //     "Incorrect email or password. Please try again or create an account!",
+      // });
       return;
     }
 
