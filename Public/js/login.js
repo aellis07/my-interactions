@@ -1,10 +1,12 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
   console.log(event);
+  console.log(event.target[0].value);
 
-  const email = document.querySelector("#email-field").value.trim();
-  const password = document.querySelector("#password-field").value.trim();
+  const email = event.target[0].value.trim();
   console.log(email);
+
+  const password = event.target[1].value.trim();
   console.log(password);
 
   if (email && password) {
@@ -19,6 +21,8 @@ const loginFormHandler = async (event) => {
     } else {
       alert("Failed to log in.");
     }
+  } else {
+    console.log("Nope");
   }
 };
 
