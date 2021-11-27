@@ -1,10 +1,13 @@
 const router = require("express").Router();
 const newUserRoutes = require("./newUser-routes");
 
-router.use("/new", newUserRoutes);
+// const sequelize = require("../config/connection");
 
-router.get("/", (req, res) => {
-  res.send("Welcome to /api, you probably meant to go to another endpoint");
-});
+
+router.use("/", newUserRoutes);
+
+// router.get("/", (req, res) => {
+//   res.send("Welcome to /api, you probably meant to go to another endpoint");
+// });
 
 module.exports = router;

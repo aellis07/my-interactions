@@ -22,6 +22,12 @@ Drug.init(
       allowNull: false,
     },
   },
-  { sequelize, timestamps: false, underscored: false, modelName: "drug" }
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "drug",
+  }
 );
 module.exports = Drug;
