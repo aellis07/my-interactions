@@ -22,26 +22,29 @@ const loginFormHandler = async (event) => {
       alert("Failed to log in.");
     }
   } else {
-    console.log("Nope");
+    prompt("Failed to log in.");
   }
 };
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const username = document.querySelector("#new-name").value.trim();
-  const email = document.querySelector("#new-email").value.trim();
-  const password = document.querySelector("#new-password").value.trim();
+  const name = event.target[2].value.trim();
+  console.log(name);
+  const email = event.target[0].value.trim();
+  console.log(email);
+  const password = event.target[1].value.trim();
+  console.log(password);
 
-  if (username && email && password) {
-    const response = await fetch("/", {
+  if (name && email && password) {
+    const response = await fetch("/api/new", {
       method: "POST",
-      body: JSON.stringify({ username, email, password }),
+      body: JSON.stringify({ name, email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       alert("Failed to sign up.");
     }

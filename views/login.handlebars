@@ -1,7 +1,7 @@
 {{! This is just practice space for handlbars}}
 
 <h1> HELLO Login PAGE</h1>
-<!-- Login space -->
+{{! <!-- Login space --> }}
 <!-- Email -->
 <form class="login-form">
   <div class="input-group input-group-lg">
@@ -31,6 +31,16 @@
 <!-- Create Account space -->
 
 <form class="signup-form">
+  <!-- Name -->
+  <div class="input-group input-group-lg">
+    <span class="input-group-text" id="new-name">Name:</span>
+    <input
+      type="text"
+      class="form-control"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-lg"
+    />
+  </div>
   <!-- Email -->
   <div class="input-group input-group-lg">
     <span class="input-group-text" id="new-email">Email:</span>
@@ -44,16 +54,6 @@
   <!-- Password -->
   <div class="input-group input-group-lg">
     <span class="input-group-text" id="new-password">Password:</span>
-    <input
-      type="text"
-      class="form-control"
-      aria-label="Sizing example input"
-      aria-describedby="inputGroup-sizing-lg"
-    />
-  </div>
-  <!-- Name -->
-  <div class="input-group input-group-lg">
-    <span class="input-group-text" id="new-name">Name:</span>
     <input
       type="text"
       class="form-control"
