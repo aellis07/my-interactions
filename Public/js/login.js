@@ -1,52 +1,45 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
-  console.log(event);
-  console.log(event.target[0].value);
 
-  const email = event.target[0].value.trim();
-  console.log(email);
-
-  const password = event.target[1].value.trim();
-  console.log(password);
+  // Collect values from the login form
+  const email = document.querySelector("#email-login").value.trim();
+  const password = document.querySelector("#password-login").value.trim();
 
   if (email && password) {
-    const response = await fetch("/login", {
+    // Send a POST request to the API endpoint
+    const response = await fetch("/api/users/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard");
+      // If successful, redirect the browser to the profile page
+      document.location.replace("/profile");
     } else {
-      alert("Failed to log in.");
+      alert(response.statusText);
     }
-  } else {
-    prompt("Failed to log in.");
   }
 };
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = event.target[2].value.trim();
-  console.log(name);
-  const email = event.target[0].value.trim();
-  console.log(email);
-  const password = event.target[1].value.trim();
-  console.log(password);
+  const name = document.querySelector("#name-signup").value.trim();
+  const email = document.querySelector("#email-signup").value.trim();
+  const password = document.querySelector("#password-signup").value.trim();
 
   if (name && email && password) {
-    const response = await fetch("/api/new", {
+    const response = await fetch("/api/users", {
       method: "POST",
       body: JSON.stringify({ name, email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard");
+      document.location.replace("/profile");
     } else {
-      alert("Failed to sign up.");
+      alert(response.statusText);
     }
   }
 };
