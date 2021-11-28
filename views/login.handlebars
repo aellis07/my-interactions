@@ -1,69 +1,42 @@
-{{! This is just practice space for handlbars}}
+<div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
 
-<h1> HELLO Login PAGE</h1>
-{{! <!-- Login space --> }}
-<!-- Email -->
-<form class="login-form">
-  <div class="input-group input-group-lg">
-    <span class="input-group-text" id="email-field">Email:</span>
-    <input
-      type="text"
-      class="form-control"
-      aria-label="Sizing example input"
-      aria-describedby="inputGroup-sizing-lg"
-    />
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
   </div>
-  <!-- Password -->
-  <div class="input-group input-group-lg">
-    <span class="input-group-text" id="password-field">Password:</span>
-    <input
-      type="text"
-      class="form-control"
-      aria-label="Sizing example input"
-      aria-describedby="inputGroup-sizing-lg"
-    />
-  </div>
+  <div class="col-md-6">
+    <h2>Signup</h2>
 
-  <button type="submit" class="btn btn-info" id="login-button">Login</button>
-</form>
-<!-- Login ends here -->
-
-<!-- Create Account space -->
-
-<form class="signup-form">
-  <!-- Name -->
-  <div class="input-group input-group-lg">
-    <span class="input-group-text" id="new-name">Name:</span>
-    <input
-      type="text"
-      class="form-control"
-      aria-label="Sizing example input"
-      aria-describedby="inputGroup-sizing-lg"
-    />
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
   </div>
-  <!-- Email -->
-  <div class="input-group input-group-lg">
-    <span class="input-group-text" id="new-email">Email:</span>
-    <input
-      type="text"
-      class="form-control"
-      aria-label="Sizing example input"
-      aria-describedby="inputGroup-sizing-lg"
-    />
-  </div>
-  <!-- Password -->
-  <div class="input-group input-group-lg">
-    <span class="input-group-text" id="new-password">Password:</span>
-    <input
-      type="text"
-      class="form-control"
-      aria-label="Sizing example input"
-      aria-describedby="inputGroup-sizing-lg"
-    />
-  </div>
+</div>
 
-  <button type="submit" class="btn btn-info" id="login-button">Create Login</button>
-</form>
-<!-- Create Account ends here -->
-{{! <script src="../public/js/login.js"></script> }}
 <script src="./js/login.js"></script>
