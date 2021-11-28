@@ -1,5 +1,13 @@
 const User = require("./User");
 const Drug = require("./Drugs");
 
-module.exports = { User };
-module.exports = { Drug };
+User.hasMany(Drug, {
+  foreignKey: "drug_id",
+  onDelete: "CASCADE",
+});
+
+Drug.belongsTo(User, {
+  foreignKey: "drug_id",
+});
+
+module.exports = { User, Drug };
