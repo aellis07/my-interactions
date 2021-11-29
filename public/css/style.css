@@ -47,6 +47,12 @@ header,
   font-weight: 500;
   color: #e6e5e3;
 }
+.header-3-text {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  color: #e6e5e3;
+  font-size: x-large;
+}
 .nav-text {
   font-family: "Comfortaa", sans-serif;
   color: black;
