@@ -33,12 +33,12 @@
       </div>
     </form>
   </div>
-
+  <div id="output">
+  </div>
+  </div>
   {{#if projects.length}}
     <div class="col-md-6 project-list">
       <h3>Current Drug Interactions:</h3>
-
-      <div id="output"></div>
 
       {{#each projects as |project|}}
         <div class="row mb-2">
@@ -57,7 +57,7 @@
   {{/if}}
 </div>
 
-<script src="./js/dashboard.js"></script>
+{{! <script src="./js/dashboard.js"></script> }}
 <script
   src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
 ></script>
