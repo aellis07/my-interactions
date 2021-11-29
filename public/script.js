@@ -1,11 +1,12 @@
 const searchDrug = $("#search-drug");
 // const drugOutput = document.createElement("p");
 // document.getElementById("output").appendChild(drugOutput);
+const drugOutput = "";
+$("#output").append(`<p>${drugOutput}</p>`);
 // drugOutput.setAttribute("class", "output-relation");
 searchDrug.on("click", function get(event) {
   event.preventDefault();
   const drug = document.getElementById("project-name").value;
-  console.log(drug);
   const drug2 = document.getElementById("project-funding").value;
   const getDrugId = async () => {
     const result = await fetch(
@@ -45,7 +46,8 @@ searchDrug.on("click", function get(event) {
       const secondDrug = drugId2;
       if (secondDrug === drugId) {
         console.log(drugDescription);
-        drugOutput.textContent = drugDescription;
+        // drugOutput.textContent = drugDescription;
+        drugOutput = drugDescription;
       }
     }
   };
