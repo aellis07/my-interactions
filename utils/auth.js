@@ -1,11 +1,9 @@
 const withAuth = (req, res, next) => {
-  // TODO: If the user is not logged in, redirect the user to the login page
-  if (req.session.loggedIn) {
-    next();
-  } else {
+  if (!req.session.logged_in) {
     res.redirect("/login");
+  } else {
+    next();
   }
-  // TODO: If the user is logged in, allow them to view their dashboard -or- proceed
 };
 
 module.exports = withAuth;

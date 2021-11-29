@@ -1,60 +1,44 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
 
-    <!-- nav from bootstrap -->
-    <nav class="navbar navbar-light bg-light big-nav">
-      <form class="container-fluid justify-content-start">
-        <!-- Dropdown button that will display other options -->
-        <button class="btn btn-outline-success me-2" type="button">Menu</button>
-        <!-- Button that will take you to your account that contains saved searches -->
-        <div>
-          <button class="btn btn-sm btn-outline-secondary" type="button">
-            My account
-          </button>
-          <!-- Button that will allow you to log out -->
-          <button class="btn btn-sm btn-outline-secondary" type="button">
-            Logout
-          </button>
-        </div>
-      </form>
-    </nav>
-    <!-- nav ends here -->
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Drug Interaction:</h3>
 
-    <!-- search field for drugs -->
-    <!-- First drug search  -->
-    <div class="input-group input-group-lg">
-      <span class="input-group-text" id="inputGroup-sizing-lg">Drug 1:</span>
-      <input
-        type="text"
-        class="form-control"
-        aria-label="Sizing example input"
-        aria-describedby="inputGroup-sizing-lg"
-      />
-    </div>
-    <!-- Second drug search -->
-    <div class="input-group input-group-lg">
-      <span class="input-group-text" id="inputGroup-sizing-lg">Drug 2:</span>
-      <input
-        type="text"
-        class="form-control"
-        aria-label="Sizing example input"
-        aria-describedby="inputGroup-sizing-lg"
-      />
-    </div>
-
-    <button type="button" class="btn btn-info">Find</button>
-    <!-- Search ends here -->
-
-    <!-- Current working search field -->
-    <div>
-      <input type="text" id="drug-search" placeholder="Enter a drug here" />
-      <input
-        type="text"
-        id="drug-search2"
-        placeholder="Enter another drug to search for here"
-      />
-      <button id="drug-name">Click here to search for your drug</button>
-      <!-- Search field ends here -->
-
-      <!-- Output to display drug relationship -->
-      <div class="output">
-        This is where the output for search results will go
+    <form class="form new-project-form">
+      <div class="form-group">
+        <label for="project-name">1ST DRUG TO SEARCH:</label>
+        <input class="form-input" type="text" id="project-name" name="project-name" />
       </div>
+      <div class="form-group">
+        <label for="project-funding">2ND DRUG TO SEARCH:</label>
+        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">SEARCH FOR INTERACTIONS</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if projects.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Drug Interactions:</h3>
+
+    {{#each projects as |project|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/dashboard.js"></script>
