@@ -1,9 +1,4 @@
 const searchDrug = $("#search-drug");
-// const drugOutput = document.createElement("p");
-// document.getElementById("output").appendChild(drugOutput);
-// const drugOutput = "";
-// $("#output").append(`<p>${drugOutput}</p>`);
-// drugOutput.setAttribute("class", "output-relation");
 searchDrug.on("click", function get(event) {
   event.preventDefault();
   const drug = document.getElementById("project-name").value;
@@ -25,8 +20,6 @@ searchDrug.on("click", function get(event) {
     const drugId = json.idGroup.rxnormId[0];
     const json2 = await result2.json();
     const drugId2 = json2.idGroup.rxnormId[0];
-    console.log(drugId);
-    console.log(drugId2);
     getDrug(drugId, drugId2);
   };
   getDrugId();
@@ -45,8 +38,6 @@ searchDrug.on("click", function get(event) {
       const drugDescription = drugRelation[i].description;
       const secondDrug = drugId2;
       if (secondDrug === drugId) {
-        console.log(drugDescription);
-        // drugOutput.textContent = drugDescription;
         const drugOutput = drugDescription;
         $("#output").empty();
         $("#output").append(`<p>${drugOutput}</p>`);
