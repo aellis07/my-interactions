@@ -1,16 +1,16 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2 class="header-text">Welcome, {{name}}!</h2>
   </div>
 </div>
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Drug Interaction:</h3>
+    <h3 class="header-3-text">Create a New Drug Interaction:</h3>
 
     <form class="form new-project-form">
       <div class="form-group">
-        <label for="project-name">1ST DRUG TO SEARCH:</label>
+        <label for="project-name" class="field-text">1st Drug to Search:</label>
         <input
           class="form-input"
           type="text"
@@ -19,7 +19,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="project-funding">2ND DRUG TO SEARCH:</label>
+        <label for="project-funding" class="field-text">2nd Drug to Search:</label>
         <input
           class="form-input"
           type="text"
@@ -28,17 +28,16 @@
         />
       </div>
       <div class="form-group">
-        <button type="submit" id="search-drug" class="btn btn-primary">SEARCH
-          FOR INTERACTIONS</button>
+        <button type="submit" id="search-drug" class="btn btn-primary button-text">Show My Interactions</button>
       </div>
     </form>
   </div>
-  <div id="output">
+  <div id="output" class="header-text">
   </div>
   </div>
   {{#if projects.length}}
     <div class="col-md-6 project-list">
-      <h3>Current Drug Interactions:</h3>
+      <h3 class="header-text">Current Drug Interactions:</h3>
 
       {{#each projects as |project|}}
         <div class="row mb-2">
