@@ -1,8 +1,8 @@
 const searchDrug = $("#search-drug");
 // const drugOutput = document.createElement("p");
 // document.getElementById("output").appendChild(drugOutput);
-const drugOutput = "";
-$("#output").append(`<p>${drugOutput}</p>`);
+// const drugOutput = "";
+// $("#output").append(`<p>${drugOutput}</p>`);
 // drugOutput.setAttribute("class", "output-relation");
 searchDrug.on("click", function get(event) {
   event.preventDefault();
@@ -47,7 +47,9 @@ searchDrug.on("click", function get(event) {
       if (secondDrug === drugId) {
         console.log(drugDescription);
         // drugOutput.textContent = drugDescription;
-        drugOutput = drugDescription;
+        const drugOutput = drugDescription;
+        $("#output").empty();
+        $("#output").append(`<p>${drugOutput}</p>`);
       }
     }
   };
