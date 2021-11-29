@@ -1,13 +1,12 @@
-const searchDrug = $("#drug-name");
-// const outputField = $("#output");
-// console.log(outputField);
+const searchDrug = $("#search-drug");
+
+const drugOutput = document.createElement("p");
+document.getElementById("output").appendChild(drugOutput);
+drugOutput.setAttribute("class", "output-relation");
+
 searchDrug.on("click", function get() {
-  const drug = document.getElementById("drug-search").value;
-  const drug2 = document.getElementById("drug-search2").value;
-  // document.getElementsByClassName('output').
-  // document.getElementById("output-search").innerHTML = "";
-  //   const drug = "advil";
-  //   const drug2 = "etanercept";
+  const drug = document.getElementById("project-name").value;
+  const drug2 = document.getElementById("project-funding").value;
   const getDrugId = async () => {
     const result = await fetch(
       `https://rxnav.nlm.nih.gov/REST/rxcui.json?name=${drug}&search=2`,
@@ -47,16 +46,7 @@ searchDrug.on("click", function get() {
       const secondDrug = drugId2;
       if (secondDrug === drugId) {
         console.log(drugDescription);
-        const drugOutput = document.createElement("p");
-        // drugOutput.textContent = "";
-        // drugOutput.textContent = drugDescription;
-
-        document.getElementById("output").appendChild(drugOutput);
-        drugOutput.setAttribute("class", "output-search");
-        document.getElementsByClassName("output-search").innerHTML = "";
-        drugOutput.textContent = "";
         drugOutput.textContent = drugDescription;
-        // console.log(drugOutput);
       }
     }
   };
