@@ -4,26 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drug Interaction Compiler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&family=Urbanist:wght@100;400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/jass.css" />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div class="flex-column justify-space-around">
       <header class="display-flex justify-space-between align-center p-2">
         <h1>
-          <span role="img" aria-label="money">💸</span>
-          <a href="/">Drug Interaction Compiler</a>
+          <span role="img" aria-label="pill">💊</span>
+          <a href="/" class="title-text">Drug Interaction Compiler</a>
         </h1>
         <nav>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-            <a href="/dashboard">dashboard</a>
+            <a href="/dashboard" class="nav-text">dashboard</a>
             |
-            <button class="no-button" id="logout">logout</button>
+            <button
+              class="no-button"
+              id="logout"
+              class="nav-text"
+            >logout</button>
           {{else}}
-            <a href="/login">login</a>
+            <a href="/login" class="nav-text">login</a>
           {{/if}}
         </nav>
       </header>

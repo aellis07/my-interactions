@@ -1,25 +1,61 @@
-header, .project:not(:last-child) {
-    border-bottom: 1px solid #ccc;
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .no-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: #1b89bc;
-    text-decoration: none;
-    font-size: 100%;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .no-button:hover {
-    color: #065b83;
-    text-decoration: underline;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  .dollar-amount {
-    color: #056605;
-    font-weight: bold;
-    margin-left: -5px;
-  }
-  
+}
+
+header,
+.project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #38aca6;
+  text-decoration: underline;
+}
+
+.title-text {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 40px;
+  color: #e6e5e3;
+}
+.header-text {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  color: #e6e5e3;
+}
+.nav-text {
+  font-family: "Comfortaa", sans-serif;
+  color: black;
+}
+.field-text {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 500;
+  color: rgb(58, 54, 54);
+}
+.button-text {
+  font-family: "Comfortaa", sans-serif;
+}
