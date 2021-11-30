@@ -12,6 +12,9 @@
   font-size: 25px;
   padding: 10px;
 }
+* {
+  font-family: "Comfortaa", sans-serif;
+}
 .field-text {
   font-weight: 700;
 }
