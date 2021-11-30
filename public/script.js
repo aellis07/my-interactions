@@ -39,6 +39,7 @@ searchDrug.on("click", function get(event) {
       const secondDrug = drugId2;
       if (secondDrug === drugId) {
         const drugOutput = drugDescription;
+        // send the data to the webpage
         $("#output").empty();
         $("#output").append(`<p>${drugOutput}</p>`);
       }
