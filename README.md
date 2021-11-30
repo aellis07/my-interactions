@@ -39,6 +39,8 @@ https://docs.google.com/presentation/d/1aOLSsxHr0D_m7Z47QRcPrpww-8N1pkQDIoR7ipgd
 
 # Courtesy of: Rico, Anthony, Chris, and David
 
+Github: https://github.com/aellis07/my-interactions.git
+
 # License
 
 MIT License
