@@ -25,11 +25,12 @@
   color: black;
 }
 #disclaimer {
-  border: 2px gray solid;
+  /* border: 2px gray solid; */
   text-align: center;
   padding: 30px 0;
-  background-color: white;
-  border-radius: 15px;
+  color: #e6e5e3;
+  /* background-color: white; */
+  /* border-radius: 15px; */
 }
 #disclaimer h2 {
   font-size: 60px;
