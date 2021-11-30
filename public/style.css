@@ -24,3 +24,20 @@
 .header-3-text {
   color: black;
 }
+#disclaimer {
+  border: 2px gray solid;
+  text-align: center;
+  padding: 30px 0;
+  background-color: white;
+  border-radius: 15px;
+}
+#disclaimer h2 {
+  font-size: 60px;
+}
+#disclaimer h3 {
+  padding: 30px 0;
+  font-size: 30px;
+}
+#disclaimer p {
+  font-size: 20px;
+}
