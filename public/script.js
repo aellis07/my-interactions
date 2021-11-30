@@ -41,7 +41,7 @@ searchDrug.on("click", function get(event) {
         const drugOutput = drugDescription;
         // send the data to the webpage
         $("#output").empty();
-        $("#output").append(`<p>${drugOutput}</p>`);
+        $("#output").append(`<p id="output-field">${drugOutput}</p>`);
       }
     }
   };
